@@ -1,9 +1,20 @@
 package org.example.models;
 
-public class Episodio {
+import org.example.calculos.Classificavel;
+
+public class Episodio implements Classificavel {
     private int numero;
     private String nome;
     private Serie serie;
+    private double Totalavaliacao;
+
+    public double getTotalavaliacao() {
+        return Totalavaliacao;
+    }
+
+    public void setTotalavaliacao(double totalavaliacao) {
+        Totalavaliacao = totalavaliacao;
+    }
 
     public int getNumero() {
         return numero;
@@ -27,5 +38,14 @@ public class Episodio {
 
     public void setSerie(Serie serie) {
         this.serie = serie;
+    }
+
+    @Override
+    public int getClassificacao() {
+        if (Totalavaliacao > 100) {
+            return 4;
+        } else {
+            return 2;
+        }
     }
 }
