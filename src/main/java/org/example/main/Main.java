@@ -1,4 +1,4 @@
-package org.example;
+package org.example.main;
 
 import org.example.calculos.CalculadoraDeTempo;
 import org.example.calculos.FiltroRecomendacao;
@@ -10,8 +10,6 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-
-
         Filme filme = new Filme("O poderoso chefinho", 2022);
         System.out.println("\nFilmes: ");
         filme.setDuracaoMinutos(200);
@@ -45,7 +43,6 @@ public class Main {
         cal.inclui(outroFilme);
         cal.inclui(serie);
         System.out.println(cal.getTempoTotal());
-
 
         FiltroRecomendacao filtro = new FiltroRecomendacao();
 
